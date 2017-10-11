@@ -3,3 +3,12 @@
         font-size: 1.1em;
     }
 }
+
+@media only screen  and (max-width: 1450px) {
+    body {
+        font-size: .9em;
+    }
+    .wrapper_jobsItems > a {
+    width: calc(100% / 2);
+    }
+}

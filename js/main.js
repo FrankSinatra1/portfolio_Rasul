@@ -12,6 +12,12 @@ $(".left_fixedBlock--menu").click(function(){
    $(".wrapper_fullContent").toggleClass("wrap_fullContentJS");
 });
 
+$(".hamburger_menuHidden").click(function(){
+    $(".wrapper_fullContent").css ({
+    transition: "2.2s"
+  });
+});
+
 
 $(".application_messageMenuJS").click(function(){
     $(".wrapper_formMenuJS").toggleClass("anim_formMenuJS");

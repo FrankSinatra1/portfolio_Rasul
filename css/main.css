@@ -274,7 +274,6 @@ input[type="text"]:focus::placeholder {
 .wrapper_fullContent {
     margin-left: 71px;
     transform: scale(1);
-    transition: 2.5s;
 }
 
 .wrap_fullContentJS {
