@@ -1,0 +1,222 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul li {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.left_fixedBlock {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 70px;
+    border-right: 1px solid #f5f5f5;
+}
+
+.left_fixedBlock--menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hamburger .line{
+  width: 30px;
+  height: 3px;
+  background-color: #0804fb;
+  display: block;
+  margin: 6px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger:hover{
+  cursor: pointer;
+}
+
+#hamburger-3.is-active .line:nth-child(1),
+#hamburger-3.is-active .line:nth-child(3){
+  width: 18px;
+}
+
+#hamburger-3.is-active .line:nth-child(1){
+  -webkit-transform: translateX(-8px) rotate(-35deg) translateY(4px);
+  -ms-transform: translateX(-8px) rotate(-35deg) translateY(4px);
+  -o-transform: translateX(-8px) rotate(-35deg) translateY(4px);
+  transform: translateX(-8px) rotate(-35deg) translateY(4px);
+}
+
+#hamburger-3.is-active .line:nth-child(3){
+  -webkit-transform: translateX(-8px) rotate(35deg) translateY(-4px);
+  -ms-transform: translateX(-8px) rotate(35deg) translateY(-4px);
+  -o-transform: translateX(-8px) rotate(35deg) translateY(-4px);
+  transform: translateX(-8px) rotate(35deg) translateY(-4px);
+}
+
+.wrapper_fullContent {
+    margin-left: 71px;
+}
+
+.wrap_filter {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    height: 70px;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 20px;
+    position: relative;
+}
+
+.filter_clickMenu {
+    display: none;
+    position: absolute;
+    top: 55px;
+    text-align: right;
+    z-index: 1;
+}.filter_clickMenuJS {display: block;}
+
+.filter_clickMenu a{
+    color: rgba(205, 205, 205, 1);
+    font-family: MetaPro-Book;
+    transition: .2s;
+}.filter_clickMenu ul li {
+    padding: 2px;
+    margin: 7px 0;
+}.filter_clickMenu ul li a:hover{color: #0804fb;}
+
+.wrapper_backgroundText {
+    margin-top: 50px;
+    overflow: hidden;
+    background-image: url(../img/bg_text.png);
+    height: 232px;
+    background-repeat: no-repeat;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: center;
+    background-position: center;
+    padding-left: 74px;
+}
+
+.wrapper_backgroundText .wrap_text h1{font-size: 3.6em;color: #0804fb;font-family: MetaSerifPro-Book;letter-spacing: 1.3px;margin-bottom: 10px;}
+.wrapper_backgroundText .wrap_text p{color: #cdcdcd;font-family: MetaPro-Medium;letter-spacing: .5px}
+
+
+/*menu*/
+.wrap_menu {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    left: -100%;
+    z-index: 2;
+    transition: 1.7s;
+}
+
+.wrap_menu .left_fixedBlock {
+    position: absolute !important;
+}
+
+.wrap_menuJS {
+    left: 0;
+    transition: 1.7s;
+}
+
+.wrapper_listMenuJS {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items:center;
+    height: 100%;
+    margin-left: auto;
+    width: 91.4%;
+}
+
+.wrap_listMenuJS ul li{
+    font-size: 2.7em;
+    padding: 3px 0;
+    margin: 20px 0;
+    opacity: 0;
+    font-family: MetaSerifPro-Book;
+    letter-spacing: 1px;
+}
+
+.wrap_listMenuJS a{color: rgba(205, 205, 205, 1);transition: .2s;}
+.wrap_listMenuJS a:hover{color: #0804fb;}
+
+.listMenuJS_ul ul li{
+    opacity: 1;
+    transition: opacity 1.1s 1.4s;
+}
+
+.wrapper_addressesMenuJS {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    margin-left: 150px;
+}
+
+.wrap_adressMenu-one, .wrap_adressMenu-two {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: column;
+    font-family: MetaPro-Book;
+    color: rgba(205, 205, 205, 1);
+    line-height: 25px;
+}
+
+.wrap_adressMenu-one p:first-child, .wrap_adressMenu-two p:first-child {
+    font-family: MetaPro-Medium;
+    color: #151515;
+}.wrap_adressMenu-two a{color: rgba(205, 205, 205, 1);}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Academy';
+    src: url("../fonts/Academy.otf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'MetaPro-Book';
+    src: url("../fonts/MetaPro-Book.otf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'MetaPro-Medium';
+    src: url("../fonts/MetaPro-Medium.otf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'MetaSerifPro-Book';
+    src: url("../fonts/MetaSerifPro-Book.otf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
