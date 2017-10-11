@@ -25,3 +25,10 @@
     font-style: normal;
     font-weight: normal;
 }
+
+@font-face {
+    font-family: 'MetaPro-Normal';
+    src: url("../fonts/MetaPro-Normal.otf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
