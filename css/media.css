@@ -12,3 +12,31 @@
     width: calc(100% / 2);
     }
 }
+
+@media only screen  and (max-width: 692px) {
+    body {
+        font-size: .8em;
+    }
+    .wrapper_jobsItems > a {
+    width: calc(100% / 1);
+    }
+    .wrap_menu {
+        left: -100%;
+    }
+    .wrapper_listMenuJS {
+        flex-direction: column;
+        text-align: center;
+        width: auto;
+        justify-content: center;
+    }
+    .wrapper_addressesMenuJS {
+        width: 45%;
+        margin-top: 70px;
+        justify-content: space-between;
+        margin-left: 0;
+    }
+    .wrap_formMenuJS form {
+        width: auto;
+        flex-direction: column;
+    }
+}

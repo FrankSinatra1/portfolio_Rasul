@@ -9,6 +9,7 @@ $(".left_fixedBlock--menu, .hamburger_menuHidden").click(function(){
    $(".wrap_listMenuJS").toggleClass("listMenuJS_ul");
    $(".wrap_adressMenu-one").toggleClass("adressesMenuJS");
    $(".wrap_adressMenu-two").toggleClass("adressesMenuJS");
+   $(".wrap_account").toggleClass("accountMenuJS");
    $(".wraper_footer").toggleClass("wrapper_jobsItems__hidden");
 });
 
@@ -29,3 +30,4 @@ $(".application_messageMenuJS").click(function(){
     $(".wrapper_adressMenu").toggleClass("anim_adressMenuJS");
     $(this).toggleClass("application_messageMenuJS_fontColor");
 });
+

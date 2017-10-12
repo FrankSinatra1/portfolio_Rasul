@@ -83,12 +83,12 @@ ul li {
 
 /*menu*/
 .wrap_menu {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     background: #fff;
     left: -100%;
-    z-index: 2;
+    z-index: 1;
     transition: 1.7s;
 }
 
@@ -97,8 +97,9 @@ ul li {
 }
 
 .wrap_menuJS {
-    left: 0;
+    left: 0 !important;
     transition: 1.7s;
+    z-index: 2;
 }
 
 .wrapper_listMenuJS {
@@ -143,7 +144,7 @@ ul li {
     margin-left: 150px;
 }
 
-.wrap_adressMenu-one, .wrap_adressMenu-two {opacity: 0;transition: 1s;}
+.wrap_adressMenu-one, .wrap_adressMenu-two{opacity: 0;transition: 1s;}
 
 .wrapper_adressMenu {
     transition: 1.2s; 
@@ -199,8 +200,11 @@ ul li {
 .wrap_adressMenu-two a:hover{color: rgb(8, 4, 251);}
 
 .adressesMenuJS{
-    opacity: 1;
-    transition: 1.1s 1.6s;
+    opacity: 1 !important;
+    transition: 1.1s 1.6s !important;
+}.accountMenuJS {
+    opacity: 1 !important;
+    transition: 1.1s 1.9s !important;
 }
 
 .wrap_formMenuJS form{
@@ -417,10 +421,26 @@ input[type="text"]:focus::placeholder {
 .wraper_footer a{color: rgba(255, 255, 255, 0.63);}
 
 
+.wrap_account {
+    color: #cdcdcd;
+    position: absolute;
+    bottom: 55px;
+    right: 50px;
+    cursor: pointer;
+    font-family: MetaPro-Medium;
+    opacity: 0;
+}.icon_account:hover{color: #000;}
 
-
-
-
-
+.icon_account {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    width: 72px;
+    transition: .2s;
+    align-items: center;
+}
 
 
