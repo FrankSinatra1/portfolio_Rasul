@@ -23,7 +23,7 @@ ul li {
     border-right: 1px solid #f5f5f5;
 }
 
-.left_fixedBlock--menu {
+.left_fixedBlock--menu,  .hamburger_menuHidden{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -146,7 +146,7 @@ ul li {
 .wrap_adressMenu-one, .wrap_adressMenu-two {opacity: 0;transition: 1s;}
 
 .wrapper_adressMenu {
-    transition: 1s; 
+    transition: 1.2s; 
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
@@ -159,7 +159,7 @@ ul li {
 .anim_adressMenuJS {
     position: relative;
     transform: translateY(155%);
-    transition: 1s !important; 
+    transition: 1.2s !important; 
 }
 
 .wrapper_formMenuJS {
@@ -167,18 +167,18 @@ ul li {
     top: 19%;
     opacity: 0;
     font-size: .99em;
-    transition: .8s;
+    transition: 1.2s;
     z-index: -1000;
 }
 
-.wrapper_formMenuJS p{font-family: MetaPro-Medium;font-size: 1.27em;}
-
 .anim_formMenuJS{
     top: 30%;
-    transition: .8s;
+    transition: 1.2s;
     opacity: 1;
     z-index: 1;
 }
+
+.wrapper_formMenuJS p{font-family: MetaPro-Medium;font-size: 1.27em;}
 
 .wrap_adressMenu-one, .wrap_adressMenu-two {
     display: -webkit-flex;
@@ -273,12 +273,10 @@ input[type="text"]:focus::placeholder {
 
 .wrapper_fullContent {
     margin-left: 71px;
-    transform: scale(1);
 }
 
 .wrap_fullContentJS {
-    transform: scale(.88);
-    transition: transform 3.6s;
+    display: none;
 }
 
 .wrap_filter {
@@ -324,6 +322,10 @@ input[type="text"]:focus::placeholder {
     width: 100%;
 }
 
+.wrapper_jobsItems__hidden {
+    display: none;
+}
+
 .wrapper_jobsItems > a {
     width: calc(100% / 3);
     position: relative;
@@ -332,6 +334,7 @@ input[type="text"]:focus::placeholder {
 .jobItem {
     width: 100%;
     height: 405px;
+    position: relative;
     background-repeat: no-repeat;
     background-position: center;
 }

@@ -4,18 +4,23 @@ $(".hover_menuJS").click(function(){
 });
 
 
-$(".left_fixedBlock--menu").click(function(){
+$(".left_fixedBlock--menu, .hamburger_menuHidden").click(function(){
    $(".wrap_menu").toggleClass("wrap_menuJS");
    $(".wrap_listMenuJS").toggleClass("listMenuJS_ul");
    $(".wrap_adressMenu-one").toggleClass("adressesMenuJS");
    $(".wrap_adressMenu-two").toggleClass("adressesMenuJS");
-   $(".wrapper_fullContent").toggleClass("wrap_fullContentJS");
+   $(".wraper_footer").toggleClass("wrapper_jobsItems__hidden");
+});
+
+
+$(".left_fixedBlock--menu").click(function(){
+    setTimeout (function(){
+        $(".wrapper_fullContent").toggleClass("wrap_fullContentJS");
+    }, 1500)
 });
 
 $(".hamburger_menuHidden").click(function(){
-    $(".wrapper_fullContent").css ({
-    transition: "2.2s"
-  });
+    $(".wrapper_fullContent").removeClass("wrap_fullContentJS");
 });
 
 
