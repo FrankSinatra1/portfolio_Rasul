@@ -20,7 +20,15 @@ ul li {
     top: 0;
     height: 100%;
     width: 70px;
+    z-index: 1000;
     border-right: 1px solid #f5f5f5;
+}
+.left_fixedBlock--logo{
+    opacity: 0;
+}
+.left_fixedBlock--logoAnim {
+    transition: 3s 1.766s;
+    opacity: 1;
 }
 
 .left_fixedBlock--menu,  .hamburger_menuHidden{
@@ -29,17 +37,25 @@ ul li {
     left: 50%;
     transform: translateX(-50%);
 }
-
 .hamburger .line{
-  width: 30px;
-  height: 3px;
+  width: 0px;
+  height: 2px;
   background-color: #0804fb;
   display: block;
   margin: 6px auto;
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
+
+.line1{
+    width: 1px;
+    margin-left: 0 !important;
+}.line2{
+    width: 1px;
+    margin-left: 0 !important;
+}.line3{
+    width: 1px;
+    margin-left: 0 !important;
+}
+
 
 .hamburger:hover{
   cursor: pointer;
@@ -47,21 +63,22 @@ ul li {
 
 #hamburger-3.is-active .line:nth-child(1),
 #hamburger-3.is-active .line:nth-child(3){
-  width: 18px;
+  width: 17px !important;
+  transition: 1.2s !important;
 }
 
 #hamburger-3.is-active .line:nth-child(1){
   -webkit-transform: translateX(-8px) rotate(-35deg) translateY(4px);
   -ms-transform: translateX(-8px) rotate(-35deg) translateY(4px);
   -o-transform: translateX(-8px) rotate(-35deg) translateY(4px);
-  transform: translateX(-8px) rotate(-35deg) translateY(4px);
+  transform: translateX(-6px) rotate(-37deg) translateY(4px);
 }
 
 #hamburger-3.is-active .line:nth-child(3){
   -webkit-transform: translateX(-8px) rotate(35deg) translateY(-4px);
   -ms-transform: translateX(-8px) rotate(35deg) translateY(-4px);
   -o-transform: translateX(-8px) rotate(35deg) translateY(-4px);
-  transform: translateX(-8px) rotate(35deg) translateY(-4px);
+  transform: translateX(-6px) rotate(37deg) translateY(-4px);
 }
 
 .filter_clickMenu {
@@ -168,13 +185,13 @@ ul li {
     top: 19%;
     opacity: 0;
     font-size: .99em;
-    transition: 1.2s;
+    transition: 1.1s;
     z-index: -1000;
 }
 
 .anim_formMenuJS{
     top: 30%;
-    transition: 1.2s;
+    transition: 1.1s;
     opacity: 1;
     z-index: 1;
 }
@@ -280,7 +297,8 @@ input[type="text"]:focus::placeholder {
 }
 
 .wrap_fullContentJS {
-    display: none;
+    overflow: hidden;
+    height: 0;
 }
 
 .wrap_filter {
@@ -289,7 +307,7 @@ input[type="text"]:focus::placeholder {
     display: -ms-flex;
     display: -o-flex;
     display: flex;
-    height: 70px;
+    height: 71px;
     justify-content: flex-end;
     align-items: center;
     margin-right: 20px;
@@ -299,7 +317,6 @@ input[type="text"]:focus::placeholder {
 .wrapper_backgroundText {
     margin-top: 50px;
     overflow: hidden;
-    background-image: url(../img/bg_text.png);
     height: 232px;
     background-repeat: no-repeat;
     display: -webkit-flex;
@@ -309,7 +326,23 @@ input[type="text"]:focus::placeholder {
     display: flex;
     align-items: center;
     background-position: center;
-    padding-left: 74px;
+    position: relative;
+}
+
+.wrapper_backgroundText img {
+    object-position: center;
+    margin-left: 11px;
+    opacity: 0;
+}
+
+.textShow_h1 {
+    opacity: 0;
+    transition-duration: .2s !important;
+}
+
+.wrapper_backgroundText .wrap_text {
+    position: absolute;
+    left: 74px;
 }
 
 .wrapper_backgroundText .wrap_text h1{font-size: 3.6em;color: #0804fb;font-family: MetaSerifPro-Book;letter-spacing: 1.3px;margin-bottom: 10px;}
@@ -338,34 +371,25 @@ input[type="text"]:focus::placeholder {
 .jobItem {
     width: 100%;
     height: 405px;
-    position: relative;
     background-repeat: no-repeat;
     background-position: center;
+    overflow: hidden;
 }
 
+.wrapper_jobsItems a {
+    position: relative;
+}
 
 .wrapper_jobsItems a:hover .jobHover{
-    opacity: .73;
-    transition: .4s;
+    opacity: .85;
+    transition: .65s;
+    width: inherit;
 }
 .jobHover{
-    padding: 50px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
+    height: 100%;
     background: #0804fb;
     opacity: 0;
-}
-
-.h3_job, .parag_job {
-    font-family: MetaPro-Medium;
-    color:  #fff;
-    letter-spacing: 1.4px;
-    position: relative;
-}.parag_job {
-    color: #aaa9ff;
+    width: 0;
 }
 
 .h3_job:after {
@@ -418,12 +442,22 @@ input[type="text"]:focus::placeholder {
     line-height: 25px;
 }
 
+.wrap_footer {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% / 3);
+}
+
 .wraper_footer a{color: rgba(255, 255, 255, 0.63);}
 
 
 .wrap_account {
     color: #cdcdcd;
-    position: absolute;
+    position: fixed;
     bottom: 55px;
     right: 50px;
     cursor: pointer;
@@ -442,5 +476,115 @@ input[type="text"]:focus::placeholder {
     transition: .2s;
     align-items: center;
 }
+
+
+/*________________________________________________________________________*/
+
+.jobOpasity {
+    opacity: 0;
+}
+.jobsAnimarionOnLoad_1 {
+    opacity: 1;
+    transition: 1.2s 1.9s;
+}
+.jobsAnimarionOnLoad_2 {
+    opacity: 1;
+    transition: 1.2s 2.1s;
+}
+.jobsAnimarionOnLoad_3 {
+    opacity: 1;
+    transition: 1.2s 2.3s;
+}
+.jobsAnimarionOnLoad_4 {
+    opacity: 1;
+    transition: 2s 2.5s;
+}
+.jobsAnimarionOnLoad_5 {
+    opacity: 1;
+    transition: 2s 2.7s;
+}
+.jobsAnimarionOnLoad_6 {
+    opacity: 1;
+    transition: 2s 2.9s;
+}
+.jobsAnimarionOnLoad_7 {
+    opacity: 1;
+    transition: 2s 3.1s;
+}
+
+.textAnimShow {
+    height: 25px;
+    display:none;
+    position: relative;
+    width: 100vh;
+    top: 40px;
+    left: 40px;
+}
+.jobHover {
+    font-family: MetaPro-Medium;
+    color:  #fff;
+    letter-spacing: 1.4px;
+}
+
+.h3_job, .parag_job {
+    position: relative;
+    width: 100vh;
+    top: 40px;
+    left: 40px;
+}.parag_job {
+    color: #aaa9ff;
+}
+
+#hellopreloader_preload{display: block;position: fixed;z-index: 99999;top: 0;left: 0;width: 100%;height: 100%;min-width: 1000px;background: #fff;}
+
+#hellopreloader_preload p {
+    font-family: MetaSerifPro;
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    width: 100%;
+    font-size: 1.7em;
+    letter-spacing: .6px;
+    transform: translateY(-50%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
