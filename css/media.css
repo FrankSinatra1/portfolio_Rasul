@@ -8,7 +8,7 @@
     body {
         font-size: .9em;
     }
-    .wrapper_jobsItems > a {
+    .wrapper_jobsItems li {
     width: calc(100% / 2);
     }
 }
@@ -17,7 +17,7 @@
     body {
         font-size: .8em;
     }
-    .wrapper_jobsItems > a {
+    ..wrapper_jobsItems li {
     width: calc(100% / 1);
     }
     .wrap_menu {
